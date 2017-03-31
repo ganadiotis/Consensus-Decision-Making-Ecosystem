@@ -1,0 +1,526 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<!-- saved from url=(0053)http://www.imc.com.gr/ontologies/eDialogos/consensus/ -->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:mvcb="http://webns.net/mvcb/" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>eDialogos Consensus Ontology Specification</title>
+    
+    <link rel="mvcb:generatorAgent" type="application/rdf+xml" title="DOAP" href="http://rdfohloh.wikier.org/project/specgen">
+    <link rel="stylesheet" type="text/css" href="./eDialogos Consensus Ontology Specification_files/style.css">
+    <link rel="shortcut icon" href="http://www.imc.com.gr/ontologies/eDialogos/consensus/favicon.png">
+  <style type="text/css"></style></head>
+
+  <body>
+    <div id="wrapper">
+
+	<a href="http://www.imc.com.gr/"><img id="logo_imc" src="./eDialogos Consensus Ontology Specification_files/imc_logo.png" alt="IMC Technologies" style="border: 0pt none ; padding: 10px;"></a> 
+	<a href="http://purl.org/edialogos/consensus"><img id="logo_consensus" src="./eDialogos Consensus Ontology Specification_files/consensus_logo.png" alt="eDialogos Consensus Ontology" style="border: 0pt none ; float: right; padding: 10px;"></a> 
+
+    <h1 id="title">eDialogos Consensus Ontology Specification</h1>
+    <!--    <h2 id="subtitle">LONG NAME</h2> -->
+    <h3 id="mymw-doctype">V0.1 - 06 February 2012</h3>
+    <dl>
+    <table border="0">
+    <tbody><tr>
+        <td>
+            <b>This version:</b>
+        </td>
+        <td>
+            <a href="http://purl.org/edialogos/consensus/0.1/ns">http://purl.org/edialogos/consensus/0.1/ns</a> (<a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/ns.owl">RDF/XML</a>, <a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/index.html">HTML</a>)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Latest version:</b>
+        </td>
+        <td>
+            <a href="http://purl.org/edialogos/consensus/ns">http://purl.org/edialogos/consensus/ns</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Editors:</b>
+        </td>
+        <td>
+            <a href="http://ganadiotis.wordpress.com/">George Anadiotis</a>, <a href="http://adamwesterski.com/">Adam Westerski</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Authors:</b>
+        </td>
+        <td>
+            <a href="http://ganadiotis.wordpress.com/">George Anadiotis, </a><a href="http://adamwesterski.com/">Adam Westerski</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Contributors:</b>
+        </td>
+        <td>
+            See <a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#acknowledgements">acknowledgements</a>
+        </td>
+    </tr>
+    </tbody></table>
+    
+    <p>
+    <a href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border: 0pt none ; float: right; padding: 10px;" src="./eDialogos Consensus Ontology Specification_files/cc_licence.png"></a> 
+    </p>    
+    <p class="copyright">This work is licensed under a <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a>. This copyright applies to the eDialogos Consensus Ontology Specification and accompanying documentation in RDF. This ontology uses W3C's <a href="http://www.w3.org/RDF/">RDF</a> technology, an open Web standard that can be freely used by anyone.</p>
+
+    <!-- ===================================================================== -->
+    <hr>
+
+    <h2 id="abstract">Abstract</h2>
+    <p>    
+        <b>eDialogos Consensus</b> is a standardised data schema (also referred as "ontology" or "vocabulary") designed to reflect the deliberation process in expert systems that obtain the final guidelines through participative role of domain specialists. The primary focus of the model is the process of reaching a consensus on certain issues through discussion of many different points of view. The following document contains the description of ontology and instructions how to connect it with descriptions of other resources.</p>
+
+    <hr>
+  
+    <h2 id="contents">Table of Contents</h2>
+    <ol id="toc">
+      <li><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#intro">Introduction</a>
+        <ol>
+          <li><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#s11">Deliberation process and consensus modelling basics</a></li>
+          <li><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#s12">The Semantic Web</a></li>
+          <li><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#s13">What is eDialogos Consensus for?</a></li>
+        </ol>
+      </li>
+      <li><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#sec-glance">eDialogos Consensus ontology at a glance</a></li>
+      <li>
+        <a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#overview">eDialogos Consensus ontology overview</a>
+        <ol>
+          <li><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#s31">Referenced namespaces</a></li>
+          <li><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#s32">Example</a></li>
+        </ol>
+      </li>
+      <li><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#reference">Cross-reference for eDialogos Consensus classes and properties</a></li>
+    </ol>
+
+    <h3>Appendixes</h3>
+    <ol id="appendix" style="list-style-type:upper-alpha;">
+<!--      <li><a href="#references">Normative References</a></li> -->
+      <li><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#changes">Changelog</a></li>
+      <li><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#acknowledgements">Acknowledgements</a></li>
+    </ol>
+
+    <hr>
+
+    <!-- ===================================================================== -->
+
+    <h2 id="intro">1 Introduction</h2>
+
+    <p>The following specification is a formal description of metadata schema proposal that can be applied to data of systems that allow deliberation over various topics and embed mechanisms to describe the process of reaching a common consensus. The goal of the following section is to provide the basic knowledge to comprehend the technical part of the specification. As such it shall introduce both Semantic Web and general topic of consensus representation and deliberation modelling.</p>
+
+<p><b>The principal design goal</b> of eDialogos Consensus is to reuse existing ontologies and link together in a new context a number of already defined key concepts for the deliberation process, refer to <a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#overview">ontology overview diagram</a> to see how this goal has been achieved.</p>    
+    
+    <p><b>An important note</b> is that eDialogos Consensus ontology presented here is not a complete model to address the problem of describing and linking deliberation activities in Web systems and inside enterprises. The following schema defines concepts that are not described yet by the means of other ontologies and provides the data attributes that enable to connect personal statements together and with contextual information already defined in metadata created with other ontologies.</p>
+
+    <h3 id="s11">1.1 Deliberation process and consensus modelling basics</h3>
+
+	Historically, the first approach to collaborative problem solving was the IBIS (Issue-Based Information System) methodology by Horst Rittel back in the 1960s. Inevitably all subsequent collaborative problem solving approaches somehow reference it. IBIS success lies in the fact that it provides a structure and a process simple to conceive. The basic model includes just a few concepts:
+
+    <div class="quote">
+      <pre> Q: Question
+       A: Alternative / Answer
+          P: Pro
+          C: Con
+     </pre>
+    </div>
+
+As the time progressed there have been a number of approaches to model discussions taking into account different goals and the changing reality of how people collaborate.
+<p>The <b>eDialogos Consensus</b> ontology is a solution for modelling discussions as interpreted by IBIS but in the context of the contemporary Web and taking into account the necessity to integrate different information systems with the use of Web technologies (and more specifically metadata publishing and light-weight information system integration). For a quick introduction in IBIS, please refer to <a href="http://www.cognexus.org/IBIS-A_Tool_for_All_Reasons.pdf">this</a> document</p>
+<p>Besides IBIS, the ontology heavily reuses concepts from <a href="http://www.gi2mo.org/0.4/ns.html">GI2MO</a>, as the concept of Idea is key in this domain and is extended by the Position concept, and peripheral concepts are also reused to model the Collaborative Decision Making domain.</p>
+
+    <h3 id="s12">1.2 The Semantic Web</h3>
+
+    <p>The <a href="http://www.w3.org/standards/semanticweb/">Semantic Web</a> is a W3C initiative that aims to introduce rich metadata to the current Web and provide machine readable and processable data as a supplement to human-readable Web.
+    </p>
+    <p>
+    Semantic Web is a mature domain that has been in research phase for many years and with the increasing amount of commercial interest and emerging products is starting to gain appreciation and popularity as one of the rising trends for the future Internet.
+    </p>
+    
+    <p>
+    One of the corner stones of the Semantic Web is research on inter-linkable and interoperable data schemas for information published online. Those schemas are often referred to as ontologies or vocabularies. In order to facilitate the concept of ontologies that lead to a truly interoperable Web of Data, W3C has proposed a series of technologies such as <a href="http://www.w3.org/RDF/">RDF</a> and <a href="http://www.w3.org/TR/owl2-overview/">OWL</a>.
+    <b>eDialogos Consensus</b> uses those technologies to enable publishing and processing of information related to deliberation process and in particular the building blocks of the achieved consensus by Web communities.
+    </p>
+
+    <h3 id="s13">1.3 What is eDialogos Consensus for?</h3>
+    <p>
+    The goals of the eDialogos Consensus ontology to achieve as a data schema are:
+    </p><ul>
+    <li>enable to publish and consume raw data about discussions and how they lead to achieving a consensus</li>
+    <li>interconnect data from different collaborative deliberation platforms and allow for all of them to take part in the discussion process marking distinct impact on the consensus achievement</li>
+    </ul>
+    For more information please refer to <a href="http://www.imc.com.gr/web/imc/open-edialogos">eDialogos platform</a> with implements in practice the ontology and a number of other Semantic Web technologies to deliver a flexible environment for deliberation.
+    <p></p>
+
+
+    <!-- ===================================================================== -->
+
+    <h2 id="sec-glance">2. eDialogos Consensus ontology at a glance</h2>
+
+    <p>
+      An alphabetical index of eDialogos Consensus terms, by class (concepts) and by property 
+      (relationships, attributes), are given below. All the terms are hyperlinked 
+      to their detailed description for quick reference.
+    </p>
+
+    <!-- The list of classes and properties goes here -->
+    <div style="padding: 1em; border: dotted; background-color: #ddd;"><p>Classes:  <a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_Argument">Argument</a>,  <a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_ArgumentMap">ArgumentMap</a>,  <a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_Issue">Issue</a>,  <a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_Note">Note</a>,  <a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_Position">Position</a>, 
+</p><p>Properties:  <a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_hasAccessContol">hasAccessContol</a>,  <a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_hasCreator">hasCreator</a>,  <a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_hasPositionStatement">hasPositionStatement</a>,  <a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_hasTag">hasTag</a>,  <a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_hasTopic">hasTopic</a>,  <a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_isAccessContolOf">isAccessContolOf</a>,  <a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_isCreatorOf">isCreatorOf</a>,  <a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_isPositionStatementOf">isPositionStatementOf</a>,  <a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_isTagOf">isTagOf</a>,  <a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_isTopicOf">isTopicOf</a>, 
+</p>
+</div>
+    <!-- End of the terms list -->
+
+    <!-- ===================================================================== -->
+
+    <h2 id="overview">3. eDialogos Consensus ontology overview</h2>
+
+    <p>The eDialogos Consensus class diagram presented below shows connections between classes and properties used for describing opinions.</p>
+    
+    <div class="img"> 
+				<a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/img/class_diagram_v0.1.png"><img src="./eDialogos Consensus Ontology Specification_files/class_diagram_v0.1_small.png" alt="Class and Properties Diagram for the eDialogos Consensus Ontology" title="click to enlarge" style="border:0"></a> 
+				<div>Class and Properties Diagram for the eDialogos Consensus Ontology (high resolution version: <a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/img/class_diagram_v0.1.png">PNG</a>)</div> 
+	</div> 
+    
+    <h3 id="s31">3.1. Referenced Namespaces</h3>
+    <p>
+    A common practice in Semantic Web domain is to take advantage of the work previously done and model new domains with the use of widely known and well established vocabularies. This practice simplifies the vocabulary pool, allows to establish naming standards and implement better interoperability and data portability across potentially very different systems.
+    </p>
+    <p>
+    Within eDialogos project we attempted to follow those rules and part of the eDialogos Consensus model has been described with the use of other ontologies. As a result, some of the classes and properties defined in this specification have references to properties from other ontologies to indicate point of connection. Those referenced ontologies are described with the following namespaces:
+    </p>
+   
+    <table cellpadding="3" cellspacing="2" class="references-table">
+        <tbody><tr style="font-weight: bold;">
+            <td class="prefix_table_cell">
+                Prefix
+            </td>
+            <td class="prefix_table_cell">
+                Namespace
+            </td>
+            <td class="prefix_table_cell">
+                Specification/ Usage Description
+            </td>
+        </tr>
+        <tr style="vertical-align: top">
+            <td class="prefix_table_cell">
+                dcterms
+            </td>
+            <td class="prefix_table_cell">
+                http://purl.org/dc/terms/
+            </td>
+            <td class="prefix_table_cell" style="border-bottom: 1px solid #E1D7D7;">
+                <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core Terms</a> ontology is a core ontology that defines a number of very generic properties such as title, description etc. Those are used across many classes in the Consensus ontology and well as other ontologies mentioned below.
+            </td>
+        </tr>
+        <tr style="vertical-align: top">
+            <td class="prefix_table_cell">
+                gi2mo
+            </td>
+            <td class="prefix_table_cell">
+                http://purl.org/gi2mo/ns#
+            </td>
+            <td class="prefix_table_cell">
+                <a href="http://www.gi2mo.org/">Generic Idea and Innovation Management Ontology</a>. In Consensus we reuse Idea, Idea Contest concepts, as well as concepts related to expert and collaborative review process.
+            </td>
+        </tr>
+        <tr style="vertical-align: top;">
+            <td class="prefix_table_cell">
+                deliberation
+            </td>
+            <td class="prefix_table_cell">
+                http://purl.org/edialogos/deliberation/ns#
+            </td>
+            <td class="prefix_table_cell">
+                <a href="http://www.imc.com.gr/web/imc/open-edialogos">eDialogos Deliberation ontology</a>. The concept of Deliberation is reused for compatibility reason with previous research on combining different online media in the deliberation process.  
+            </td>
+        </tr>
+        <tr style="vertical-align: top">
+            <td class="prefix_table_cell">
+                ibis
+            </td>
+            <td class="prefix_table_cell">
+                http://purl.org/ibis#
+            </td>
+            <td class="prefix_table_cell">
+                <a href="http://hyperdata.org/xmlns/ibis/">IBIS ontology</a>. Reused to point to the conceptual counterparts in the most basic model of deliberation cycle and to technically enable relationships between ideas and associated discussions.
+            </td>
+        </tr>
+        <tr style="vertical-align: top">
+            <td class="prefix_table_cell">
+                pb
+            </td>
+            <td class="prefix_table_cell">
+                http://www.hypios.com/ontologies/problem/ns#
+            </td>
+            <td class="prefix_table_cell">
+                <a href="http://research.hypios.com/neologism/pb">Problem Challenge Ontology</a>. Included in order to model the issue concept, it’s changes over time and challenge marketplaces model.
+            </td>
+        </tr>
+        <tr style="vertical-align: top">
+            <td class="prefix_table_cell">
+                foaf
+            </td>
+            <td class="prefix_table_cell">
+                http://xmlns.com/foaf/0.1/
+            </td>
+            <td class="prefix_table_cell">
+                <a href="http://xmlns.com/foaf/spec/">Friend Of A Friend</a> ontology. Within Consensus (and through Gi2MO and Problem Challenge ontologies) it is used to model concepts related to user account and the digital personification of a human being.
+            </td>
+        </tr>
+        <tr style="vertical-align: top">
+            <td class="prefix_table_cell">
+                scot
+            </td>
+            <td class="prefix_table_cell">
+                http://scot-project.org/scot/ns#
+            </td>
+            <td class="prefix_table_cell">
+                 <a href="http://scot-project.org/scot/spec/scot.html">Social Semantic Cloud of Tags</a> ontology. The concepts of this ontology are used to model tags together with Newman's Tags ontology.
+            </td>
+        </tr>
+        <tr style="vertical-align: top">
+            <td class="prefix_table_cell">
+                tags
+            </td>
+            <td class="prefix_table_cell">
+                http://www.holygoat.co.uk/owl/redwood/0.1/tags/
+            </td>
+            <td class="prefix_table_cell">
+                 <a href="http://www.holygoat.co.uk/projects/tags/">Newman's Tags</a> ontology. The concepts of this ontology are used as a base model tags. 
+            </td>
+        </tr>
+    </tbody></table>
+    
+
+    <h3 id="s32">3.2. Example</h3> <!-- 3.2. Example -->
+
+    <p>A very basic example below shows a single opinion annotated with eDialogos Consensus metadata (the second class maps the opinion structure and is shown as reference):</p>
+
+    <div class="example">
+      <pre>  &lt;consensus:Issue rdf:about="http://www.imc.com.gr/question/1/tordf"&gt;
+    &lt;consensus:hasCreator rdf:resource="http://www.imc.com.gr/user/1/tordf"/&gt;
+    &lt;dcterms:created&gt;1318957085&lt;/pb:dateOfPublishing&gt;
+    &lt;dcterms:title&gt;Question 1&lt;/pb:title&gt;
+    &lt;gi2mo:content&gt;How to publish data online ?&lt;/pb:problemStatement&gt;
+    &lt;consensus:hasTag rdf:resource="http://www.imc.com.gr/tag/1/tordf"/&gt;
+    &lt;pb:challengeType ref:resoucre="http://www.hypios.com/ontologies/problem/ns#RequestForSolutions"/&gt;
+    &lt;pb:currentStatus rdf:resoucre="http://www.hypios.com/ontologies/problem/ns#ChallengeOpen"/&gt;
+    &lt;pb:challengePage rdf:resource="http://www.imc.com.gr/question/1/"/&gt;
+    &lt;pb:postedon rdf:resource="http://www.imc.com.gr/argumentmap/1/tordf"/&gt;
+    &lt;consensus:hasTopic rdf:resource="http://www.imc.com.gr/topic/1/tordf"/&gt;
+    &lt;consensus:hasTag rdf:resource="http://www.imc.com.gr/tag/2/tordf"/&gt;
+    &lt;consensus:hasPositionStatement rdf:resource="http://www.imc.com.gr/question/1/position/1/tordf"/&gt;
+  &lt;/consensus:Issue&gt;
+      
+  &lt;consensus:Position rdf:about="http://www.imc.com.gr/question/1/position/1/tordf"&gt;
+    &lt;gi2mo:hasCreator rdf:resource="http://www.imc.com.gr/user/2/tordf"/&gt;
+    &lt;dcterms:created&gt;1318957085&lt;/dcterms:created&gt;
+    &lt;dcterms:title&gt;Position 1&lt;/dcterms:title&gt;
+    &lt;gi2mo:content&gt;In lets use RDF .....&lt;/gi2mo:content&gt;
+    &lt;gi2mo:hasTag rdf:resource="http://www.imc.com.gr/tag/1/tordf"/&gt;
+    &lt;gi2mo:hasTag rdf:resource="http://www.imc.com.gr/tag/2/tordf"/&gt;
+    &lt;foaf:page rdf:resource="http://www.imc.com.gr/question/1/position/1/"/&gt;
+    &lt;gi2mo:hasReview rdf:resource="http://www.imc.com.gr/question/1/position/1/rating/tordf"/&gt;
+    &lt;consensus:isPositionStatementFor rdf:resource="http://www.imc.com.gr/question/1/tordf"/&gt;
+    &lt;consensus:isPositionStatementFor rdf:resource="http://www.imc.com.gr/argumentmap/1/tordf"/&gt;
+    &lt;gi2mo:isMergedInto rdf:resource="http://www.imc.com.gr:92/question/1/position/3/tordf"/&gt;
+  &lt;/consensus:Position&gt;
+      </pre>
+    </div>
+    
+    <!-- ===================================================================== -->
+
+    <h2 id="reference">4. Cross-reference for eDialogos Consensus classes and properties</h2>
+
+    <p>Below see a comprehensive list of all eDialogos Consensus classes, properties and their descriptions.</p>
+
+    <!-- The following is the script-generated list of classes and properties -->
+    <div class="specterm" id="term_Argument">
+<h3>Class: consensus:Argument</h3>
+<p style="font-family:monospace; font-size:0.em;"><b>URI:</b> <a href="http://purl.org/edialogos/consensus/ns#Argument">http://purl.org/edialogos/consensus/ns#Argument</a></p><p><em>Argument</em> - Extended commnets attached to Position statements. In addition to regular notes they allow to explicitly point if the person agrees or disargees with the Position statement. </p>
+<dl><dt><b>sub-class-of:</b></dt><dd><a href="http://purl.org/ibis#Argument" style="font-family: monospace;">http://purl.org/ibis#Argument</a></dd><dd><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_Note" style="font-family: monospace;">consensus:Note</a></dd></dl>
+<p class="backtop">[<a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#sec-glance">back to top</a>]</p>
+
+
+
+</div>
+
+<div class="specterm" id="term_ArgumentMap">
+<h3>Class: consensus:ArgumentMap</h3>
+<p style="font-family:monospace; font-size:0.em;"><b>URI:</b> <a href="http://purl.org/edialogos/consensus/ns#ArgumentMap">http://purl.org/edialogos/consensus/ns#ArgumentMap</a></p><p><em>ArgumentMap</em> - Class that aggregates questions on similar topic or problem area. </p>
+<dl><dt><b>sub-class-of:</b></dt><dd><a href="http://purl.org/ibis#Map" style="font-family: monospace;">http://purl.org/ibis#Map</a></dd><dd><a href="http://purl.org/edialogos/deliberation/ns#Deliberation" style="font-family: monospace;">http://purl.org/edialogos/deliberation/ns#Deliberation</a></dd><dd><a href="http://www.hypios.com/ontologies/problem/ns#ChallengeMarketplace" style="font-family: monospace;">http://www.hypios.com/ontologies/problem/ns#ChallengeMarketplace</a></dd><dt><b>in-domain-of:</b></dt><dd class="prop_object"><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_hasAccessContol" style="font-family: monospace;">consensus:hasAccessContol</a></dd><dd class="prop_object"><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_hasCreator" style="font-family: monospace;">consensus:hasCreator</a></dd><dd class="prop_object"><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_hasPositionStatement" style="font-family: monospace;">consensus:hasPositionStatement</a></dd><dt><b>in-range-of:</b></dt><dd><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_isCreatorOf" style="font-family: monospace;">consensus:isCreatorOf</a></dd><dd><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_isAccessContolOf" style="font-family: monospace;">consensus:isAccessContolOf</a></dd><dd><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_isPositionStatementOf" style="font-family: monospace;">consensus:isPositionStatementOf</a></dd></dl>
+<p class="backtop">[<a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#sec-glance">back to top</a>]</p>
+
+
+
+</div>
+
+<div class="specterm" id="term_Issue">
+<h3>Class: consensus:Issue</h3>
+<p style="font-family:monospace; font-size:0.em;"><b>URI:</b> <a href="http://purl.org/edialogos/consensus/ns#Issue">http://purl.org/edialogos/consensus/ns#Issue</a></p><p><em>Issue</em> - This class represent a particular problem that is deliberated and has a number of responses in form of Position statements. Issues relating to similar topics or problem area are aggregated using Argument Maps. </p>
+<dl><dt><b>sub-class-of:</b></dt><dd><a href="http://purl.org/ibis#Question" style="font-family: monospace;">http://purl.org/ibis#Question</a></dd><dd><a href="http://www.hypios.com/ontologies/problem/ns#ProblemChallenge" style="font-family: monospace;">http://www.hypios.com/ontologies/problem/ns#ProblemChallenge</a></dd><dd><a href="http://purl.org/gi2mo/ns#IdeaContest" style="font-family: monospace;">http://purl.org/gi2mo/ns#IdeaContest</a></dd><dt><b>in-domain-of:</b></dt><dd class="prop_object"><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_hasPositionStatement" style="font-family: monospace;">consensus:hasPositionStatement</a></dd><dd class="prop_object"><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_hasTopic" style="font-family: monospace;">consensus:hasTopic</a></dd><dt><b>in-range-of:</b></dt><dd><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_isPositionStatementOf" style="font-family: monospace;">consensus:isPositionStatementOf</a></dd><dd><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_isTopicOf" style="font-family: monospace;">consensus:isTopicOf</a></dd></dl>
+<p class="backtop">[<a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#sec-glance">back to top</a>]</p>
+
+
+
+</div>
+
+<div class="specterm" id="term_Note">
+<h3>Class: consensus:Note</h3>
+<p style="font-family:monospace; font-size:0.em;"><b>URI:</b> <a href="http://purl.org/edialogos/consensus/ns#Note">http://purl.org/edialogos/consensus/ns#Note</a></p><p><em>Note</em> - Represents simple textual comments attached to Position statements. </p>
+<dl><dt><b>sub-class-of:</b></dt><dd><a href="http://purl.org/ibis#Note" style="font-family: monospace;">http://purl.org/ibis#Note</a></dd><dd><a href="http://purl.org/gi2mo/ns#TextualReview" style="font-family: monospace;">http://purl.org/gi2mo/ns#TextualReview</a></dd></dl>
+<p class="backtop">[<a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#sec-glance">back to top</a>]</p>
+
+
+
+</div>
+
+<div class="specterm" id="term_Position">
+<h3>Class: consensus:Position</h3>
+<p style="font-family:monospace; font-size:0.em;"><b>URI:</b> <a href="http://purl.org/edialogos/consensus/ns#Position">http://purl.org/edialogos/consensus/ns#Position</a></p><p><em>Position</em> - Represents a position statement posted in response to a certain question. This class can be also used to represent the final consensus position statement that merges selected statements. Gi2MO Idea relationship properties (e.g. gi2mo:isMergedFrom) can be used to express which Positions have been merged into a final one. </p>
+<dl><dt><b>sub-class-of:</b></dt><dd><a href="http://purl.org/ibis#Idea" style="font-family: monospace;">http://purl.org/ibis#Idea</a></dd><dd><a href="http://purl.org/gi2mo/ns#Idea" style="font-family: monospace;">http://purl.org/gi2mo/ns#Idea</a></dd><dt><b>in-domain-of:</b></dt><dd class="prop_object"><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_isPositionStatementOf" style="font-family: monospace;">consensus:isPositionStatementOf</a></dd><dd class="prop_object"><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_hasTopic" style="font-family: monospace;">consensus:hasTopic</a></dd><dt><b>in-range-of:</b></dt><dd><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_hasPositionStatement" style="font-family: monospace;">consensus:hasPositionStatement</a></dd><dd><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_isTopicOf" style="font-family: monospace;">consensus:isTopicOf</a></dd></dl>
+<p class="backtop">[<a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#sec-glance">back to top</a>]</p>
+
+
+
+</div>
+
+<div class="specterm" id="term_hasAccessContol">
+<h3>Property: consensus:hasAccessContol</h3>
+<p style="font-family:monospace; font-size:0.em;"><b>URI:</b> <a href="http://purl.org/edialogos/consensus/ns#hasAccessContol">http://purl.org/edialogos/consensus/ns#hasAccessContol</a></p><p><em>hasAccessContol</em> - Connects Argument Map with AccessControl </p>
+<dl><dt><b>Inverse:</b></dt><dd><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_isAccessContolOf" style="font-family: monospace;">consensus:isAccessContolOf</a></dd><dt><b>OWL Type:</b></dt><dd>ObjectProperty</dd>
+<dt><b>sub-property-of:</b></dt> <dd><a href="http://purl.org/gi2mo/ns#hasAccessContol" style="font-family: monospace;">http://purl.org/gi2mo/ns#hasAccessContol</a></dd><dt><b>Domain:</b></dt> <dd><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_ArgumentMap" style="font-family: monospace;">consensus:ArgumentMap</a></dd><dt><b>Range:</b></dt> <dd><a href="http://purl.org/gi2mo/ns#AccessContolList" style="font-family: monospace;">http://purl.org/gi2mo/ns#AccessContolList</a></dd></dl>
+<p class="backtop">[<a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#sec-glance">back to top</a>]</p>
+
+
+
+</div>
+
+<div class="specterm" id="term_hasCreator">
+<h3>Property: consensus:hasCreator</h3>
+<p style="font-family:monospace; font-size:0.em;"><b>URI:</b> <a href="http://purl.org/edialogos/consensus/ns#hasCreator">http://purl.org/edialogos/consensus/ns#hasCreator</a></p><p><em>hasCreator</em> - Relates ArgumentMap to the description of the person that created it. </p>
+<dl><dt><b>Inverse:</b></dt><dd><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_isCreatorOf" style="font-family: monospace;">consensus:isCreatorOf</a></dd><dt><b>OWL Type:</b></dt><dd>ObjectProperty</dd>
+<dt><b>sub-property-of:</b></dt> <dd><a href="http://purl.org/gi2mo/ns#hasCreator" style="font-family: monospace;">http://purl.org/gi2mo/ns#hasCreator</a></dd><dt><b>Domain:</b></dt> <dd><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_ArgumentMap" style="font-family: monospace;">consensus:ArgumentMap</a></dd><dt><b>Range:</b></dt> <dd><a href="http://purl.org/gi2mo/ns#User" style="font-family: monospace;">http://purl.org/gi2mo/ns#User</a></dd></dl>
+<p class="backtop">[<a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#sec-glance">back to top</a>]</p>
+
+
+
+</div>
+
+<div class="specterm" id="term_hasPositionStatement">
+<h3>Property: consensus:hasPositionStatement</h3>
+<p style="font-family:monospace; font-size:0.em;"><b>URI:</b> <a href="http://purl.org/edialogos/consensus/ns#hasPositionStatement">http://purl.org/edialogos/consensus/ns#hasPositionStatement</a></p><p><em>PositionStatement</em> - Relates a Position to the Issue or Argument map within which it was posted. </p>
+<dl><dt><b>Inverse:</b></dt><dd><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_isPositionStatementOf" style="font-family: monospace;">consensus:isPositionStatementOf</a></dd><dt><b>OWL Type:</b></dt><dd>ObjectProperty</dd>
+<dt><b>Domain:</b></dt> <dd><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_Issue" style="font-family: monospace;">consensus:Issue</a></dd><dd><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_ArgumentMap" style="font-family: monospace;">consensus:ArgumentMap</a></dd><dt><b>Range:</b></dt> <dd><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_Position" style="font-family: monospace;">consensus:Position</a></dd></dl>
+<p class="backtop">[<a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#sec-glance">back to top</a>]</p>
+
+
+
+</div>
+
+<div class="specterm" id="term_hasTag">
+<h3>Property: consensus:hasTag</h3>
+<p style="font-family:monospace; font-size:0.em;"><b>URI:</b> <a href="http://purl.org/edialogos/consensus/ns#hasTag">http://purl.org/edialogos/consensus/ns#hasTag</a></p><p><em>hasTag</em> - Links Issue with its Tags </p>
+<dl><dt><b>Inverse:</b></dt><dd><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_isTagOf" style="font-family: monospace;">consensus:isTagOf</a></dd><dt><b>OWL Type:</b></dt><dd>ObjectProperty</dd>
+</dl>
+<p class="backtop">[<a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#sec-glance">back to top</a>]</p>
+
+
+
+</div>
+
+<div class="specterm" id="term_hasTopic">
+<h3>Property: consensus:hasTopic</h3>
+<p style="font-family:monospace; font-size:0.em;"><b>URI:</b> <a href="http://purl.org/edialogos/consensus/ns#hasTopic">http://purl.org/edialogos/consensus/ns#hasTopic</a></p><p><em>hasTopic</em> - Points to the taxonomy term that characterizes an Issue or a Position statement </p>
+<dl><dt><b>Inverse:</b></dt><dd><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_isTopicOf" style="font-family: monospace;">consensus:isTopicOf</a></dd><dt><b>OWL Type:</b></dt><dd>ObjectProperty</dd>
+<dt><b>Domain:</b></dt> <dd><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_Position" style="font-family: monospace;">consensus:Position</a></dd><dd><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_Issue" style="font-family: monospace;">consensus:Issue</a></dd><dt><b>Range:</b></dt> <dd><a href="http://www.w3.org/2008/05/skos#Concept" style="font-family: monospace;">http://www.w3.org/2008/05/skos#Concept</a></dd></dl>
+<p class="backtop">[<a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#sec-glance">back to top</a>]</p>
+
+
+
+</div>
+
+<div class="specterm" id="term_isAccessContolOf">
+<h3>Property: consensus:isAccessContolOf</h3>
+<p style="font-family:monospace; font-size:0.em;"><b>URI:</b> <a href="http://purl.org/edialogos/consensus/ns#isAccessContolOf">http://purl.org/edialogos/consensus/ns#isAccessContolOf</a></p><p><em>isAccessContol</em> - Connects Argument Map with AccessControl </p>
+<dl><dt><b>Inverse:</b></dt><dd><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_hasAccessContol" style="font-family: monospace;">consensus:hasAccessContol</a></dd><dt><b>OWL Type:</b></dt><dd>ObjectProperty</dd>
+<dt><b>sub-property-of:</b></dt> <dd><a href="http://purl.org/gi2mo/ns#isAccessControlOf" style="font-family: monospace;">http://purl.org/gi2mo/ns#isAccessControlOf</a></dd><dt><b>Domain:</b></dt> <dd><a href="http://purl.org/gi2mo/ns#AccessContolList" style="font-family: monospace;">http://purl.org/gi2mo/ns#AccessContolList</a></dd><dt><b>Range:</b></dt> <dd><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_ArgumentMap" style="font-family: monospace;">consensus:ArgumentMap</a></dd></dl>
+<p class="backtop">[<a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#sec-glance">back to top</a>]</p>
+
+
+
+</div>
+
+<div class="specterm" id="term_isCreatorOf">
+<h3>Property: consensus:isCreatorOf</h3>
+<p style="font-family:monospace; font-size:0.em;"><b>URI:</b> <a href="http://purl.org/edialogos/consensus/ns#isCreatorOf">http://purl.org/edialogos/consensus/ns#isCreatorOf</a></p><p><em>isCreatorOf</em> - Link a person to the argument map he created. </p>
+<dl><dt><b>Inverse:</b></dt><dd><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_hasCreator" style="font-family: monospace;">consensus:hasCreator</a></dd><dt><b>OWL Type:</b></dt><dd>ObjectProperty</dd>
+<dt><b>sub-property-of:</b></dt> <dd><a href="http://purl.org/gi2mo/ns#isCreatorOf" style="font-family: monospace;">http://purl.org/gi2mo/ns#isCreatorOf</a></dd><dt><b>Domain:</b></dt> <dd><a href="http://purl.org/gi2mo/ns#User" style="font-family: monospace;">http://purl.org/gi2mo/ns#User</a></dd><dt><b>Range:</b></dt> <dd><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_ArgumentMap" style="font-family: monospace;">consensus:ArgumentMap</a></dd></dl>
+<p class="backtop">[<a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#sec-glance">back to top</a>]</p>
+
+
+
+</div>
+
+<div class="specterm" id="term_isPositionStatementOf">
+<h3>Property: consensus:isPositionStatementOf</h3>
+<p style="font-family:monospace; font-size:0.em;"><b>URI:</b> <a href="http://purl.org/edialogos/consensus/ns#isPositionStatementOf">http://purl.org/edialogos/consensus/ns#isPositionStatementOf</a></p><p><em>PositionStatement</em> - Relates a Position to the Issue or Argument map within which it was posted. </p>
+<dl><dt><b>Inverse:</b></dt><dd><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_hasPositionStatement" style="font-family: monospace;">consensus:hasPositionStatement</a></dd><dt><b>OWL Type:</b></dt><dd>ObjectProperty</dd>
+<dt><b>Domain:</b></dt> <dd><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_Position" style="font-family: monospace;">consensus:Position</a></dd><dt><b>Range:</b></dt> <dd><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_Issue" style="font-family: monospace;">consensus:Issue</a></dd><dd><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_ArgumentMap" style="font-family: monospace;">consensus:ArgumentMap</a></dd></dl>
+<p class="backtop">[<a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#sec-glance">back to top</a>]</p>
+
+
+
+</div>
+
+<div class="specterm" id="term_isTagOf">
+<h3>Property: consensus:isTagOf</h3>
+<p style="font-family:monospace; font-size:0.em;"><b>URI:</b> <a href="http://purl.org/edialogos/consensus/ns#isTagOf">http://purl.org/edialogos/consensus/ns#isTagOf</a></p><p><em>isTagOf</em> - Links Issue with its Tags </p>
+<dl><dt><b>Inverse:</b></dt><dd><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_hasTag" style="font-family: monospace;">consensus:hasTag</a></dd><dt><b>OWL Type:</b></dt><dd>ObjectProperty</dd>
+</dl>
+<p class="backtop">[<a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#sec-glance">back to top</a>]</p>
+
+
+
+</div>
+
+<div class="specterm" id="term_isTopicOf">
+<h3>Property: consensus:isTopicOf</h3>
+<p style="font-family:monospace; font-size:0.em;"><b>URI:</b> <a href="http://purl.org/edialogos/consensus/ns#isTopicOf">http://purl.org/edialogos/consensus/ns#isTopicOf</a></p><p><em>isTopicOf</em> - Points to the taxonomy term that characterizes an Issue or a Position statement </p>
+<dl><dt><b>Inverse:</b></dt><dd><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_hasTopic" style="font-family: monospace;">consensus:hasTopic</a></dd><dt><b>OWL Type:</b></dt><dd>ObjectProperty</dd>
+<dt><b>Domain:</b></dt> <dd><a href="http://www.w3.org/2008/05/skos#Concept" style="font-family: monospace;">http://www.w3.org/2008/05/skos#Concept</a></dd><dt><b>Range:</b></dt> <dd><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_Position" style="font-family: monospace;">consensus:Position</a></dd><dd><a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#term_Issue" style="font-family: monospace;">consensus:Issue</a></dd></dl>
+<p class="backtop">[<a href="http://www.imc.com.gr/ontologies/eDialogos/consensus/#sec-glance">back to top</a>]</p>
+
+
+
+</div>
+
+
+    <!-- End of the terms list -->
+
+    <!-- ===================================================================== -->
+
+    <!-- <h2 id="references">A References</h2> -->
+
+    <!-- ===================================================================== -->
+
+    <h2 id="changes">A Changelog</h2>
+
+	<h3 id="sec-changes20100427">2012-01-06</h3> 
+    <ul>
+      <li>First version of the document</li> 
+    </ul>
+
+    <h2><a id="acknowledgements"></a>B Acknowledgements</h2>
+
+    <p>
+        This documentation has been generated automatically from the most recent ontology specification in OWL using a python script called <a href="http://forge.morfeo-project.org/wiki_en/index.php/SpecGen">SpecGen</a>. The style formatting has been inspired on <a href="http://xmlns.com/foaf/spec/">FOAF</a> specification.
+    </p>
+    </dl></div>
+  
+
+
+
+<!-- specification regenerated by SpecGen5 at 18:23:11 02/05/12 CET -->
+</body></html>
